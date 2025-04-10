@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter for Bestie</title>
+    <link rel="stylesheet" href="letter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Dear Bestie 💌</h1>
+    </header>
+    <canvas id="fireworks"></canvas>
+    <div class="letter-box">
+        <p>Hey Baby,</p>
+        <p>May my cute baby always stay happy and get everything in his life. May all your dreams and wishes come true. You are the best and most amazing person I have met in my life. Through my selfishness I discovered the most amazing person in my life. ❤✨😘 
+            A very happy birthday to you babu 🎂🎉❤</p>
+    </div>
+
+    <button class="surprise-btn" onclick="showSurprise()">Click Here for Surprise!</button>
+    <div id="surprise-popup" class="popup">
+        <div class="popup-content">
+            <h2>🎉 Surprise! 🎉</h2>
+            <p>You mean the world to me! Thank you for being amazing. 💖</p>
+            <div class="video-section">
+                <video id="surprise-video" width="320" height="240" controls>
+                    <source src="surprise-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <button class="close-btn" onclick="closeSurprise()">Close</button>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="back-btn" onclick="window.location.href='celebration.html'">Back to Welcome</button>
+        <button class="next-btn" onclick="window.location.href='index.html'">Back to Present🎉</button>
+    </div>
+
+    <script src="letter.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #f7edf7, #f56c7c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.curved-text {
+    position: absolute;
+    top: -5%;  /* Positioned at the top */
+    width: 100%;
+    align-items:center;
+}
+
+.curved-text text {
+    fill: #ff1a75;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);  /* Stronger shadow for better visibility */
+}
+/* Cake Styling */
+.cake {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cake {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cake Layer Styling */
+.cake-layer {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #f02658;
+    position: relative;
+    margin: 5px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-layer {
+    height: 90px;  /* Bottom layer is slightly bigger */
+    margin-bottom: 0;
+    width: 150px;
+}
+.top-layer {
+    height: 100px; /* Top layer */
+    margin-top: 0;  /* No space between layers */
+}
+.icing {
+    width: 100%;
+    height: 15px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+}
+
+/* Cherries */
+.cherries div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+
+.cherries div:nth-child(1) { left: 20px; }
+.cherries div:nth-child(2) { left: 80px; }
+.cherries div:nth-child(3) { left: 140px; }
+
+/* Candles Styling */
+.candles {
+    position: absolute;
+    top: -30px; /* Raised to sit on top of the cake */
+    display: flex;
+    gap: 15px;
+}
+
+.candle {
+    position: relative;
+    width: 10px;
+    height: 40px;
+    background-color: #eeede6;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* Icing on Cake */
+/* Icing on Cake */
+.icing {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #f7bace;
+    border-radius: 15px 15px 50% 50%;
+    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dripping Icing */
+.drip {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f77f7f;
+    border-radius: 50%;
+    top: 10px;
+    box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Flame Styling */
+.flame {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 8px;
+    height: 12px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1s infinite;
+}
+/* Style for the wish popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.popup-content h2 {
+    color: #d32f2f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Flicker effect */
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+/* Blown-out Candle Effect */
+.blown-out .flame {
+    opacity: 0;
+    animation: none;
+}
+
+.blown-out {
+    background-color: #D3D3D3;
+}
+
+/* Balloons and Glitter Styling */
+.balloon-container,
+.glitter-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Balloons */
+.balloon {
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    animation: fall 4s ease-in infinite;
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.balloon:nth-child(2) {
+    left: 30%;
+    animation-delay: 0.5s;
+}
+.balloon:nth-child(3) {
+    left: 60%;
+    animation-delay: 1s;
+}
+.balloon:nth-child(4) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+.balloon:nth-child(5) {
+    left: 70%;
+    animation-delay: 0s;
+}
+.balloon:nth-child(6) {
+    left: 50%;
+    animation-delay: 0.5s;
+}
+.balloon:nth-child(7) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+
+/* Falling Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Glitter */
+.glitter {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFD700;
+    position: absolute;
+    animation: glitter-fall 4s ease-in-out infinite,glitter-flicker 0.5s alternate infinite;
+}
+
+.glitter:nth-child(1) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+.glitter:nth-child(2) {
+    left: 30%;
+    animation-delay: 0s;
+}
+.glitter:nth-child(3) {
+    left: 60%;
+    animation-delay: 1s;
+}
+.glitter:nth-child(4) {
+    left: 10%;
+    animation-delay: 1.5s;
+}
+.glitter:nth-child(5) {
+    left: 90%;
+    animation-delay: 0s;
+}
+.glitter:nth-child(6) {
+    left: 50%;
+    animation-delay: 0.5s;
+}
+.glitter:nth-child(7) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+
+/* Glitter Falling Animation */
+@keyframes glitter-fall {
+    0% {
+        transform: translateY(-60vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+.buttons {
+    position: absolute; /* Fixes the position at the bottom */
+    bottom: 20px; /* Adds some spacing from the bottom */
+    left: 0;
+    width: 100%; /* Ensures buttons span the full width */
+    display: flex;
+    justify-content: space-between; /* Aligns buttons at both ends */
+    padding: 0 40px; /* Adds space from the sides */
+}
+
+.back-btn, .next-btn {
+    background: linear-gradient(45deg, #e2426c, #e26fc5);
+    color: #f8eef2;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn:hover, .next-btn:hover {
+    background-color: #e4b5c5;
+}
+.surprise-btn {
+    background-color: #ff69b4;  /* Bright pink for a fun vibe */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.surprise-btn:hover {
+    background-color: #ff1493;  /* Darker pink on hover */
+}
+/* General Styles for Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        overflow-y: auto; /* Allow scrolling */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .curved-text {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .curved-text text {
+        font-size: 50px; /* Scales text properly for mobile */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cake {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candles {
+        display: flex;
+        justify-content: center;
+    }
+
+    .popup {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Fix button layout for mobile */
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: static; /* Prevents fixed position issues */
+        margin-top: 20px;
+    }
+
+    .back-btn, .next-btn {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Adjust balloons and glitter */
+    .balloon-container, .glitter-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .balloon {
+        width: 20px;
+        height: 30px;
+    }
+
+    .glitter {
+        width: 10px;
+        height: 10px;
+    }
+}

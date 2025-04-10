@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cake</title>
+    <link rel="stylesheet" href="celebration.css">
+</head>
+<body>
+    <svg viewBox="0 0 500 150" class="curved-text">
+        <path id="curve" d="M 50,150 C 150,10 350,10 450,150" fill="transparent"/>
+        <text width="500">
+            <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                Happy Birthday💕
+            </textPath>
+        </text>
+    </svg>   
+     <div class="container">
+        <!-- Cake with Two Layers -->
+        <div class="cake">
+            <!-- Bottom Layer -->
+            <div class="cake-layer bottom-layer">
+                <div class="icing"></div>
+                <div class="cherries">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <!-- Top Layer -->
+            <div class="cake-layer top-layer">
+                <div class="icing"></div>
+                <div class="cherries">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            
+                <!-- Cake with 4 Candles -->
+        <div class="candles">
+        <div class="candle" onclick="blowCandle(this)">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" onclick="blowCandle(this)">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" onclick="blowCandle(this)">
+            <div class="flame"></div>
+        </div>
+        <div class="candle" onclick="blowCandle(this)">
+            <div class="flame"></div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Wish pop-up message -->
+    <div id="wish-popup" class="popup">
+        <div class="popup-content">
+            <h2> Blow The Candle and  Make a Wish!🎂✨</h2>
+        </div>
+    </div>
+
+    <!-- Balloons and Glitter -->
+    <div id="balloon-container" class="balloon-container">
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+    </div>
+    <div id="glitter-container" class="glitter-container">
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+        <div class="glitter"></div>
+    </div>
+    <div id="surprise-popup" class="popup">
+           <div class="popup-content">
+             <h2>May your all Wishes Came True Babe🎉 Have an Amazing Birthday!</h2>
+             <button onclick="window.location.href='letter.html'" class="surprise-btn">click on for next surprise🎁</button>
+
+             </div>
+         </div>
+         
+    <div class="buttons">
+        <button class="back-btn" onclick="window.location.href='wish.html'">Back to memories </button>
+        <button class="next-btn" onclick="window.location.href='letter.html'">Next Surprise 🎉</button>
+    </div>
+    <script src="celebration.js"></script>
+</body>
+</html>
